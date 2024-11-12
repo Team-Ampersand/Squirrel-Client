@@ -47,10 +47,11 @@ const config: Config = {
         h3: ['1.375rem', { lineHeight: '1.125rem', fontWeight: '700' }],
         h4: ['1rem', { lineHeight: '1.25rem', fontWeight: '700' }],
         h5: ['1.125rem', { lineHeight: '1.4038rem', fontWeight: '700' }],
-        h6: ['1.125rem', { lineHeight: '22.4608px', fontWeight: '500' }],
+        h6: ['1.125rem', { lineHeight: '1.4038rem', fontWeight: '500' }],
         body1: ['1rem', { lineHeight: '1.5rem', fontWeight: '500' }],
         body2: ['0.875rem', { lineHeight: '1.0919rem', fontWeight: '600' }],
         body3: ['0.875rem', { lineHeight: '17.4704px', fontWeight: '500' }],
+        body4: ['0.875rem', { lineHeight: '17.4704px', fontWeight: '700' }],
       },
       spacing: {
         '0': '0',
