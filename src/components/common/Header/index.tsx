@@ -2,22 +2,21 @@
 
 import { usePathname } from 'next/navigation';
 import React from 'react';
-import Logo from '../Logo';
 import NavItem from './atoms/NavItem';
-import { Book, Music } from '@/assets/svg';
+import { Book, Music, Squirrel } from '@/assets/svg';
 
 const navItems = [
-  { href: '/', icon: Book, text: '예약' },
-  { href: '/music', icon: Music, text: '음악' },
+  { href: '/', icon: Book },
+  { href: '/music', icon: Music },
 ];
 
 const Header = () => {
   const pathname = usePathname();
 
   return (
-    <div className="h-screen max-w-[258px] bg-background-card px-6 py-9">
-      <Logo />
-      <div className="mt-9 flex h-full w-full flex-col gap-2">
+    <div className="h-full w-[72px] bg-background-card py-9">
+      <Squirrel />
+      <div className="mt-9 flex flex-col items-center gap-2">
         {navItems.map((item) => {
           const isActive = pathname === item.href;
           return (
@@ -25,7 +24,6 @@ const Header = () => {
               key={item.href}
               href={item.href}
               icon={item.icon}
-              text={item.text}
               isActive={isActive}
             />
           );

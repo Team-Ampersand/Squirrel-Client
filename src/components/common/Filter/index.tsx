@@ -1,3 +1,5 @@
+'use client';
+
 import React from 'react';
 import FilterButton from './atoms/FilterButton';
 import FilterHeader from './atoms/FilterHeader';
@@ -5,7 +7,7 @@ import FilterToggle from './atoms/FilterToggle';
 
 const FilterWrapper = () => {
   return (
-    <div className="flex max-w-[320px] flex-col gap-7 bg-background-card p-6">
+    <div className="flex flex-col gap-7 bg-background-card p-6">
       <FilterHeader text="필터" />
       <div>
         <p className="mb-2 text-body2 text-neutral-n30">카테고리</p>
