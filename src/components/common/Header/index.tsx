@@ -2,8 +2,8 @@
 
 import { usePathname } from 'next/navigation';
 import React from 'react';
-import NavItem from './atoms/NavItem';
 import { Book, Music, Squirrel } from '@/assets/svg';
+import NavItem from './atoms/NavItem';
 
 const navItems = [
   { href: '/', icon: Book },

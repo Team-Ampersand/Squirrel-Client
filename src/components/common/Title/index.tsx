@@ -2,8 +2,8 @@
 
 import { usePathname } from 'next/navigation';
 import React from 'react';
-import OptionButton from '../OptionButton';
 import { Calendar, Hamburger } from '@/assets/icons';
+import OptionButton from '../OptionButton';
 
 const Title = () => {
   const pathname = usePathname();

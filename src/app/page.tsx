@@ -12,10 +12,10 @@ export default function Music() {
           <div className="h-full w-[95%]">
             <Title />
             <div className="flex h-full w-full gap-[32px]">
-              <div className="mobile1:w-full h-[calc(100%-70px)] w-[75%]">
+              <div className="h-[calc(100%-70px)] w-[75%] mobile1:w-full">
                 <TableForm />
               </div>
-              <div className="mobile1:hidden w-[25%]">
+              <div className="w-[25%] mobile1:hidden">
                 <FilterWrapper />
               </div>
             </div>

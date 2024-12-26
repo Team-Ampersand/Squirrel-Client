@@ -1,9 +1,9 @@
 import React from 'react';
+import { TrashCan } from '@/assets/icons';
+import IconButton from '@/components/common/IconButton';
 import Env from '../../atoms/Env';
 import State from '../../atoms/State';
 import Text from '../../atoms/Text';
-import { TrashCan } from '@/assets/icons';
-import IconButton from '@/components/common/IconButton';
 
 const TableItem = () => {
   const data = [
