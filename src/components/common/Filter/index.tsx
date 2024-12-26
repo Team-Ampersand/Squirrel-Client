@@ -7,7 +7,7 @@ import FilterToggle from './atoms/FilterToggle';
 
 const FilterWrapper = () => {
   return (
-    <div className="flex flex-col gap-7 bg-background-card p-6">
+    <div className="flex flex-col gap-7 rounded-lg bg-background-card p-6">
       <FilterHeader text="필터" />
       <div>
         <p className="mb-2 text-body2 text-neutral-n30">카테고리</p>

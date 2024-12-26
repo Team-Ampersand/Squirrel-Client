@@ -14,9 +14,9 @@ const Header = () => {
   const pathname = usePathname();
 
   return (
-    <div className="h-full w-[72px] bg-background-card py-9">
+    <div className="w-18 flex h-full flex-col items-center bg-background-card py-9">
       <Squirrel />
-      <div className="mt-9 flex flex-col items-center gap-2">
+      <div className="mt-9 flex grow flex-col items-center gap-2">
         {navItems.map((item) => {
           const isActive = pathname === item.href;
           return (
