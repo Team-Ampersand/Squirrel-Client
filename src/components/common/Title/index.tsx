@@ -2,6 +2,8 @@
 
 import { usePathname } from 'next/navigation';
 import React from 'react';
+import OptionButton from '../OptionButton';
+import { Calendar, Hamburger } from '@/assets/icons';
 
 const Title = () => {
   const pathname = usePathname();
@@ -18,6 +20,10 @@ const Title = () => {
   return (
     <div className="mb-[23px] flex w-full justify-between">
       <p className="text-h2 text-black">{getTitle()}</p>
+      <div className="flex space-x-4">
+        <OptionButton Icon={<Hamburger />} Text="음악신청" />
+        <OptionButton Icon={<Calendar />} Text="달력" />
+      </div>
     </div>
   );
 };
