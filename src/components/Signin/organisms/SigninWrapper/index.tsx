@@ -1,7 +1,7 @@
 import React from 'react';
+import Logo from '@/components/common/Logo';
 import ButtonWrapper from '../../molecules/ButtonWrapper';
 import InputWrapper from '../../molecules/InputWrapper';
-import Logo from '@/components/common/Logo';
 
 const SigninWrapper = () => {
   return (

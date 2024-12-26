@@ -84,6 +84,10 @@ const config: Config = {
         '80': '0.8',
       },
     },
+    screens: {
+      mobile1: { max: '1000px' },
+      mobile2: { max: '640px' },
+    },
   },
   plugins: [],
 };
