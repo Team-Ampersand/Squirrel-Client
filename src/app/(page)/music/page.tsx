@@ -1,3 +1,4 @@
+import Calendar from '@/components/common/Calendar';
 import FilterWrapper from '@/components/common/Filter';
 import Header from '@/components/common/Header';
 import TableForm from '@/components/common/Table/Organisms/TableForm';
@@ -15,8 +16,9 @@ export default function Music() {
               <div className="h-[calc(100%-70px)] w-[75%] mobile1:w-full">
                 <TableForm />
               </div>
-              <div className="w-[25%] mobile1:hidden">
+              <div className="w-[25%] space-y-[24px] mobile1:hidden">
                 <FilterWrapper />
+                <Calendar />
               </div>
             </div>
           </div>
