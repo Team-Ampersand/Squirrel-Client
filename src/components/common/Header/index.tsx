@@ -14,7 +14,7 @@ const Header = () => {
   const pathname = usePathname();
 
   return (
-    <div className="w-18 flex h-full flex-col items-center bg-background-card py-9">
+    <div className="w-18 flex h-full flex-col items-center bg-background-card py-9 mobile2:hidden">
       <Squirrel />
       <div className="mt-9 flex grow flex-col items-center gap-2">
         {navItems.map((item) => {

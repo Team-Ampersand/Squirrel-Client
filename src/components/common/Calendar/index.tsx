@@ -4,25 +4,25 @@ import { useState } from 'react';
 import { ArrowLeft, ArrowRight } from '@/assets/icons';
 import CalendarInput from './atoms/CalendarInput';
 
-const Calendar = () => {
-  const [date, setDate] = useState(new Date());
+type DateString = string; // 'YYYY-MM-DD' 형식
 
-  const formatDate = (date: Date) => ({
-    year: date.getFullYear(),
-    month: date.getMonth() + 1,
-    day: date.getDate(),
-  });
+const Calendar = () => {
+  const [date, setDate] = useState<DateString>(() => formatDate(new Date()));
+
+  function formatDate(date: Date): DateString {
+    return date.toISOString().split('T')[0];
+  }
 
   const incrementDate = () => {
     const nextDay = new Date(date);
     nextDay.setDate(nextDay.getDate() + 1);
-    setDate(nextDay);
+    setDate(formatDate(nextDay));
   };
 
   const decrementDate = () => {
     const previousDay = new Date(date);
     previousDay.setDate(previousDay.getDate() - 1);
-    setDate(previousDay);
+    setDate(formatDate(previousDay));
   };
 
   const handleChange = (type: 'year' | 'month' | 'day', value: number) => {
@@ -30,17 +30,17 @@ const Calendar = () => {
     if (type === 'year') newDate.setFullYear(value);
     if (type === 'month') newDate.setMonth(value - 1);
     if (type === 'day') newDate.setDate(value);
-    setDate(newDate);
+    setDate(formatDate(newDate));
   };
 
-  const { year, month, day } = formatDate(date);
+  const [year, month, day] = date.split('-').map(Number);
 
   return (
     <div className="flex h-[132px] w-full flex-col items-center gap-[22px] rounded-lg bg-white p-4 shadow-md">
       <div className="flex w-full items-center justify-between">
         <h2 className="text-lg font-bold text-black">날짜</h2>
         <button
-          onClick={() => setDate(new Date())}
+          onClick={() => setDate(formatDate(new Date()))}
           className="text-h5 text-neutral-n20"
         >
           초기화
